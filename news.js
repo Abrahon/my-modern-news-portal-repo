@@ -33,7 +33,7 @@ loadCategoryNews = (id) => {
 
     // console.log(id)
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
-    console.log(id)
+    //console.log(id)
     fetch(url)
         .then(res => res.json())
         .then(data => displayNewsDetailes(data.data))
@@ -73,7 +73,7 @@ const displayNewsDetailes = details => {
                     </div>
                     <div class="col-md-4">
                     <button onclick="loadData()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
+                    More view
                   </button>
                     </div>
 
@@ -90,7 +90,6 @@ const displayNewsDetailes = details => {
 
     spinner(false)
 }
-//    spenir showing
 
 // // spinner function
 function spinner(isLoading) {
@@ -104,6 +103,7 @@ function spinner(isLoading) {
         loderSection.classList.add("d-none");
     }
 }
+
 const displayNewsCount = (newslength) => {
     const newsLenthCounter = document.getElementById('newslength-container');
     newsLenthCounter.innerText = newslength;

@@ -14,4 +14,14 @@
         padding: 3px 5px;
         border: 1px solid #000;
         background: #eee;
+        border-radius:10px;
+
+    }
+    #button:hover{
+        background-color:green;
+    }
+    .counter{
+        font-size:30px;
+        color:balck;
+        font-weight:bold;
     }
