@@ -25,7 +25,7 @@ const displayCategories = categories => {
 }
 loadCategoryNews = (id) => {
     // console.log(id)
-    const url = `https://openapi.programming-hero.com/api/news/category/01${id}`
+    const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     console.log(id)
     fetch(url)
         .then(res => res.json())
@@ -38,14 +38,65 @@ const displayNewsDetailes = details => {
     const newsDetail = document.getElementById('news-detail');
     newsDetail.innerHTML = ''
     details.forEach(detail => {
-        console.log(detail);
+        // console.log(detail);
         const cardDiv = document.createElement('div');
         cardDiv.innerHTML = `
+        <div class="card mb-3 p-4" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    <img src="${detail.thumbnail_url}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                    <h4 class="card-title">${detail.title}</h4>
+                    <p class="card-text my-3">${detail.details.slice(0, 400)}</p>
+                    <div class="row">
+                    <div class="col-md-4 d-flex justify-content-between"">
+                        <img class="w-25 rounded-circle me-3" src="${detail.author.img}" alt="">
+                        <div>
+                        <h6>${detail.author.name ? detail.author.name : 'NO Name Found'}</h6>
+                        <p> ${detail.author.published_date ? detail.author.published_date : 'NO Date Found'}</p>
+                         </div>
+                       
+                    </div>
+                    <div class="col-md-4">
+                        <p></p>
+                        <h4> ${detail.total_view ? detail.total_view : '00'} M</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class='btn btn-primary'>Details</h4>
+                    </div>
 
-        `
+                </div>
+            </div>
+                `;
+
+        newsDetail.appendChild(cardDiv);
+
 
 
     })
+    // spinner(false)
+}
+// spenir showing 
+// document.getElementById("").innerHTML = addEventListener("click", function () {
+//     // start loder 
+//     spinner(true)
+
+// })
+// // spinner function 
+// const spinner = isLoading => {
+//     const loderSection = document.getElementById("loading");
+//     if (isLoading === true) {
+//         loderSection.classList.remove("d-none");
+//     }
+//     else {
+//         loderSection.classList.add("d-none");
+//     }
+// }
+
+
+
 
 }
 loadNewses();
