@@ -54,7 +54,7 @@ const displayNewsDetailes = details => {
                     <div class="col-md-8">
                     <div class="card-body">
                     <h4 class="card-title">${detail.title}</h4>
-                    <p class="card-text my-3">${detail.details.slice(0, 400)}</p>
+                    <p class="card-text my-3">${detail.details.slice(0, 800)}</p>
                     <div class="row">
                     <div class="col-md-4 d-flex justify-content-between"">
                         <img class="w-25 rounded-circle me-3" src="${detail.author.img}" alt="">
@@ -81,23 +81,26 @@ const displayNewsDetailes = details => {
 
 
     })
-    // spinner(false)
+    spinner(false)
 }
-// spenir showing 
-// document.getElementById("").innerHTML = addEventListener("click", function () {
-//     // start loder 
-//     spinner(true)
+//    spenir showing
+document.getElementById("news-detail").innerHTML = addEventListener("click", function () {
+    //     // start loding
+    spinner(true)
 
-// })
-// // spinner function 
-// const spinner = isLoading => {
-//     const loderSection = document.getElementById("loading");
-//     if (isLoading === true) {
-//         loderSection.classList.remove("d-none");
-//     }
-//     else {
-//         loderSection.classList.add("d-none");
-//     }
-// }
+})
+// // spinner function
+const spinner = isLoading => {
+    const loderSection = document.getElementById("loader");
+
+
+    if (isLoading === true) {
+        loderSection.classList.remove("d-none");
+    }
+    else {
+        loderSection.classList.add("d-none");
+    }
+}
+
 
 loadNewses();
