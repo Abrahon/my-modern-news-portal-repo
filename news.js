@@ -1,7 +1,11 @@
 const loadNewses = () => {
     fetch('https://openapi.programming-hero.com/api/news/categories')
         .then(res => res.json())
-        .then(data => displayCategories(data.data.news_category));
+        .then(data => displayCategories(data.data.news_category))
+        .catch(error => displayCategories(error))
+
+
+
 }
 const displayCategories = categories => {
     const categoriesContainer = document.getElementById('categories-container');
@@ -14,15 +18,15 @@ const displayCategories = categories => {
         newsList.innerHTML = `
         <a onclick="loadCategoryNews('${category.category_id}')"class="nav-link active">${category.category_name}</a>
       
-
         `;
+
+
         categoriesContainer.appendChild(newsList)
-
-
 
     });
 
 }
+
 loadCategoryNews = (id) => {
     // console.log(id)
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
@@ -33,6 +37,7 @@ loadCategoryNews = (id) => {
         .catch(error => displayNewsDetailes(error))
 
 }
+
 const displayNewsDetailes = details => {
     // console.log(news);
     const newsDetail = document.getElementById('news-detail');
@@ -44,7 +49,7 @@ const displayNewsDetailes = details => {
         <div class="card mb-3 p-4" >
                 <div class="row g-0">
                     <div class="col-md-4">
-                    <img src="${detail.thumbnail_url}" class="img-fluid rounded-start" alt="...">
+                    <img class="w-100"src="${detail.thumbnail_url ? detail.thumbnail_url : 'No img found'}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
@@ -95,8 +100,4 @@ const displayNewsDetailes = details => {
 //     }
 // }
 
-
-
-
-}
 loadNewses();
