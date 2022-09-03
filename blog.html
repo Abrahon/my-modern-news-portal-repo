@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="conatiner p-5">
+        <div class="content text-center ">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="about-question mx-auto">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is the difference among var let and const?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>let:</strong> The let keyword declares a block-scoped local variable, optionally
+                            initializing it to a value.
+                            Block-scoped means that the variable is only available within the block it was declared
+                            in, which is usually denoted by curly braces {}.
+
+                            <strong>var:</strong> The var keyword declares a function-scoped or global variable,
+                            optionally initializing it to a value.
+                            Function-scoped means that the variable is only available within the function it was
+                            declared in. Global variables are available throughout your entire code.
+                            <strong>const:</strong> The const keyword declares a block-scoped, immutable constant
+                            variable, i.e. a variable that can’t be reassigned.
+                            Constants are also called “immutable variables”, but that’s a bit of a misnomer since
+                            they are actually variables – just ones that can’t be reassigned.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What is the difference betwee regular function and arrow function?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong> Regular functions created </strong>using function declarations or expressions
+                            are constructible and callable. Since regular functions are constructible, they can be
+                            called using the new keyword. However, the arrow functions are only callable and not
+                            constructible, i.e arrow functions can never be used as constructor functions
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <b>what is the difference among map,for Each,filter,and find ?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong> Semantic HTML elements are those that clearly describe their meaning in a
+                                human- and</strong>
+                            machine-readable way. Elements such as
+                            <header> , <footer> and <article> are all
+                                        considered semantic because they accurately describe the purpose of the
+                                        element and the type of content that is inside them.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            what is css box model?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>A box in CSS consists of a content area</strong> which is where any text,
+                            images, or other HTML
+                            elements are displayed. This is optionally surrounded by padding, a border, and a
+                            margin, on one or more sides. The box model describes how these elements work
+                            together
+                            to create a box as displayed by CSS
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <!-- Questions end  -->
+
+</body>
+
+</html>

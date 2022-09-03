@@ -20,13 +20,11 @@
 
                 <div class="navbar nav ms-auto">
                     <a class="navbar-brand " href="#">News</a>
-                    <a class="navbar-brand " href="#">Blog</a>
+                    <a id="button" class="navbar-brand" href="blog.html">Blog</a>
                 </div>
             </div>
         </nav>
         <hr>
-
-
 
         <nav class="d-grid gap-2 col-12 mx-auto b-5">
             <ul id="categories-container" class="nav justify-content-center">
@@ -37,6 +35,14 @@
 
 
     </header>
+    <section id="loader" class="d-none">
+        <div class="spinner" class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+    </section>
 
     <main>
         <section id="output-field">
@@ -53,6 +59,9 @@
 
 
         </section>
+        <div>
+            <p>Found<span id="newslength-container">0</span> </p>
+        </div>
         <section>
             <div id="news-detail">
                 <div class="container-md ms-auto">
@@ -60,25 +69,43 @@
                     <h1 id="fris-text">Todays Headline</h1>
 
                 </div>
+
             </div>
-
-
             </div>
 
         </section>
-        <section id="loader" class="d-none">
-            <div class="spinner" class="d-flex justify-content-center align-items-center">
-                <div class="spinner-border text-success" role="status">
-                    <span class="visually-hidden">Loading...</span>
+
+
+        <!-- start question  -->
+
+
+
+
+    </main>
+    <section>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modal-body" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
+        </div>
 
-        </section>
-        <section>
-
-
-        </section>
-    </main>
+    </section>
 
 
 
