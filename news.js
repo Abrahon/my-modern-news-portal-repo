@@ -54,7 +54,7 @@ const displayNewsDetailes = details => {
                     <div class="col-md-8">
                     <div class="card-body">
                     <h4 class="card-title">${detail.title}</h4>
-                    <p class="card-text my-3">${detail.details.slice(0, 800)}</p>
+                    <p class="card-text my-3">${detail.details.slice(0, 800)}...</p>
                     <div class="row">
                     <div class="col-md-4 d-flex justify-content-between"">
                         <img class="w-25 rounded-circle me-3" src="${detail.author.img}" alt="">

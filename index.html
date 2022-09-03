@@ -13,7 +13,7 @@
 
 <body>
     <header class="container-md">
-        <nav class="navbar  bg-light">
+        <nav class="navbar bg-light">
             <div class="container-fluid justify-content-start ms-3">
                 <a class="  navbar-brand expand" href="#">Popular <span class="btn btn-outline-success me-2">News</span>
                 </a>
@@ -28,7 +28,7 @@
 
 
 
-        <nav>
+        <nav class="d-grid gap-2 col-12 mx-auto b-5">
             <ul id="categories-container" class="nav justify-content-center">
             </ul>
         </nav>
@@ -39,6 +39,20 @@
     </header>
 
     <main>
+        <section id="output-field">
+            <div class="container-md ms-auto mb-5">
+
+                <input class="form-control form-control-lg" type="text" placeholder=" total number of news"
+                    aria-label=".form-control-lg example">
+                <div class="navbar nav ms-auto justify-content-end">
+                    <button type="button" class=" navbar-brand btn btn-primary btn-sm">Today's Pic</button>
+                    <button type="button" class="p-2">Trending</button>
+                </div>
+            </div>
+
+
+
+        </section>
         <section>
             <div id="news-detail">
                 <div class="container-md ms-auto">
@@ -58,6 +72,10 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
+
+        </section>
+        <section>
+
 
         </section>
     </main>
