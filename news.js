@@ -42,6 +42,17 @@ loadCategoryNews = (id) => {
 }
 
 const displayNewsDetailes = details => {
+    // if (details.length > 0) {
+    //     const totalLength = details.length;
+    //     const inputFieldText = document.getElementById('input-id');
+    //     inputFieldText.innerText = 'Total' + '' + '[' + '' + totalLength + '' + ']' + 'Update';
+
+    // }
+    // else if (details.length <= 0) {
+    //     const totalLength = details.length;
+    //     const inputFieldText = document.getElementById('input-id');
+    //     inputFieldText.innerText = 'Total' + 'No Update';
+    // }
     // console.log(news);
     displayNewsCount(details.length)
     const newsDetail = document.getElementById('news-detail');
@@ -72,10 +83,11 @@ const displayNewsDetailes = details => {
                         <h4> ${detail.total_view ? detail.total_view : '00'}K</h4>
                     </div>
                     <div class="col-md-4">
-                    <button onclick="loadData()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    More view
-                  </button>
-                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                   Launch demo modal
+                   </button>
+                   </div>
+                    
 
                 </div>
             </div>
@@ -111,6 +123,38 @@ const displayNewsCount = (newslength) => {
 
 loadCategoryNews('08')
 
+//modal section
+
+const viewClickDetails = (id) => {
+    fetch(`https://openapi.programming-hero.com/api/news/${id}`)
+        .then(res => res.json())
+        .then(data => viewClickDetailsDisplay(data))
+        .catch(error => viewClickDetailsDisplay(error))
+
+}
+
+const viewClickDetailsDisplay = details => {
+
+    console.log(details)
+    const modal = document.getElementById('example-modal');
+    modal.innerHTML = `
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+    `
 
 
+
+
+}
 loadNewses();
